@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --color1: #49A6EA;
+    --color2: #222222;
+}
+nav{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0px 30px 0px 0px;
+}
+#navbarLogoLink{
+    text-decoration: none;
+}
+#logo{
+    font-size: 30px;
+    color: var(--color2);
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+}
+#logo1{
+    font-size: 30px;
+    color: var(--color1);
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+}
+#toggleBtn{
+    display: none;
+    font-size: 30px;
+    color: var(--color1);
+    cursor: pointer;
+}
+#toggleBtn:hover{
+    color: var(--color2);
+}
+.NavItem li a{
+    text-decoration: none;
+    color: var(--color2);
+}
+.NavItem li a:hover{
+    color: var(--color1);
+}
+.Section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: red;
+}
+
+@media screen and (max-width: 569px) {
+     nav{ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+    .NavItem{
+        display: none;
+    }
+    .logo{
+        font-size: 20px !important;
+    }
+    #toggleBtn{
+        display: inline;
+    }
+    .Section{
+        display: none;
+    }
+
+  }
