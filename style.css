@@ -3,82 +3,133 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 :root{
     --color1: #49A6EA;
     --color2: #222222;
 }
-nav{
-    padding: 20px;
-    width: 100%;
+.navbar{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
 }
-nav ul{
-    display:flex;
+.nav-center{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.nav-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoImg{
+    width: 250px;
+    height: 60px;
+    margin: 10px;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    align-items: center;
+}
+.links li a{
+    color: var(--color2);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+.links li a:hover{
+    color: var(--color1);
+}
+.socialLinks{
+    display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 250px;
+    padding: 0px 30px ;
 }
-nav ul li{
-    list-style: none;
-    margin: 0px 30px 0px 0px;
-}
-#navbarLogoLink{
-    text-decoration: none;
-}
-#logo{
-    font-size: 30px;
-    color: var(--color2);
-    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
-}
-#logo1{
-    font-size: 30px;
-    color: var(--color1);
-    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
-}
-#toggleBtn{
-    display: none;
-    font-size: 30px;
+.socialIcons{
+    font-size:30px;
     color: var(--color1);
     cursor: pointer;
+    transition: 0.5s ease-in;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
 }
-#toggleBtn:hover{
+.socialIcons:hover{
     color: var(--color2);
 }
-.NavItem li a{
-    text-decoration: none;
-    color: var(--color2);
-}
-.NavItem li a:hover{
+.navToggle{
+    font-size: 30px;
     color: var(--color1);
-}
-.Section{
     position: absolute;
-    top: 0;
-    left: 0;
     right: 0;
-    background-color: red;
+    margin: 20px;
+    padding: 7px;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+.navToggle:hover{
+    color: var(--color2);
 }
 
-@media screen and (max-width: 569px) {
-     nav{ 
+.links li{
+    padding: 10px;
+}
+@media (max-width:768px){
+    .socialLinks{
+        display: none;
+    }
+    .links{
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -ms-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+    }
+    .showLinks{
+        height:auto;
+        transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -ms-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+}
+    .navToggle{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } 
-    .NavItem{
-        display: none;
     }
-    .logo{
-        font-size: 20px !important;
+    .logoImg{
+        width: 150px;
     }
-    #toggleBtn{
-        display: inline;
-    }
-    .Section{
-        display: none;
-    }
-
-  }
+    .navbar{
+        display: block;
+        flex-direction: column;
+    }    
+}
